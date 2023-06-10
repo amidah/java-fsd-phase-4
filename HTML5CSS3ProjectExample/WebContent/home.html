@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <title>MY HOMEPAGE</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico"></link>
+<style>
+progress{
+width:300px;
+height:30px;
+}
+</style>
 </head>
 <body>
 	
@@ -28,6 +34,9 @@
 	<button id="show">Show Dialog</button>
 	</div>
 	
+	<progress id="progress-bar"  min="1" max="100" onclick="abc()"></progress>
+	
+	
 	<script type="text/javascript">
 	(function() {    
 	    var dialog = document.getElementById('myFirstDialog');    
@@ -37,7 +46,20 @@
 	    document.getElementById('hide').onclick = function() {    
 	        dialog.close();    
 	    };    
-	})();   
+	})();  
+	
+	var gvalue=1;
+	function abc(){
+		var progressExample=document.getElementById('progress-bar');
+		setInterval (function ()  
+			    {   
+			                 if(gvalue<100){  
+			                    gvalue++;  
+			                    progressExample.value =gvalue;    
+			                  }  
+			                 abc();              
+			      }, 1000);  
+			}  
 	</script>
 </body>
 </html>
