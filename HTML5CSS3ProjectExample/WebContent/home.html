@@ -7,7 +7,7 @@
 <style>
 progress{
 width:300px;
-height:30px;
+height:15px;
 }
 </style>
 </head>
@@ -35,6 +35,44 @@ height:30px;
 	</div>
 	
 	<progress id="progress-bar"  min="1" max="100" onclick="abc()"></progress>
+	<br>
+	
+	<!-- media tags -->
+	<!-- 3 supported audio file formats: mp3, wav, ogg -->
+	<div>
+		<audio controls autoplay loop>
+		<source src="myaudio.mp3" type="audio/mpeg">
+		</audio>
+	</div>	
+	
+<!-- 	3 supported video file formats: mp4, webM, ogg -->
+
+	<div>
+		<video height="300" width="300" controls autoplay loop>
+		<source src="myvideo.mp4" type="video/mp4">
+		</video>
+	</div>
+	
+	<div>
+		<canvas id="mycanvas" width="400" height="400" style="border:2px solid;" onclick="drawRectangle()"></canvas>
+		<canvas id="mylinecanvas" width="400" height="400" style="border:2px solid;"></canvas>
+	</div>
+	
+	<!-- HTML Drag and Drop-->
+	<p>Let us drag an image to the rectangle</p>
+	<div id="div1" style="widht:200px; height:300px; padding:10px; border:1px solid #aaaaaa;" 
+	ondrop="drop(event)" ondragover="allowDrop(event)">
+	</div>
+	
+	<br>
+	
+	<img id="drag1" src="favicon.ico" alt="Smiley" draggable="true" ondragstart="drag(event)"/>
+	
+	
+	
+	
+	
+	
 	
 	
 	<script type="text/javascript">
@@ -59,7 +97,39 @@ height:30px;
 			                  }  
 			                 abc();              
 			      }, 1000);  
-			}  
+			} 
+	
+	function drawRectangle(){
+	var canvas = document.getElementById('mycanvas'); 
+	
+	var canvasContext = canvas.getContext("2d");
+	
+	canvasContext.fillStyle="red";
+	
+	canvasContext.fillRect(0, 0, 200, 100);
+	
+	}
+	
+	var linecanvas = document.getElementById('mylinecanvas'); 
+	var canvasContext = linecanvas.getContext("2d");
+	canvasContext.moveTo(0,0);
+	canvasContext.lineTo(200, 100);
+	canvasContext.stroke();
+	
+	function allowDrop(ev){
+		ev.preventDefault();
+	}
+	
+	function drag(ev){
+		ev.dataTransfer.setData("text/html", ev.target.id);
+	}
+	
+	function drop(ev){
+		ev.preventDefault();
+		var data=ev.dataTransfer.getData("text/html");
+		ev.target.appendChild(document.getElementById(data));
+	}
+	
 	</script>
 </body>
 </html>
