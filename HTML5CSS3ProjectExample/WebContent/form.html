@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+<title>FORM EXAMPLES</title>
+<link rel="icon" type="image/x-icon" href="bootstrap.ico"></link>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+</head>
+<body>
+	<!-- Form Layout Types:
+	1. Vertical (default)
+	2. Horizontal
+	3. Inline
+	-->
+	
+	<!-- Form Rules :
+	1. Always use <form role="form"> (helps improve accessibility for people using screen readers)
+	2. Wrap labels and form controls in <div class="form-group"> (needed for optimum spacing)	
+	3. Add class .form-control to all textual <input>, <textarea>, and <select> elements
+	-->
+	
+	
+	<div class="container">
+		<h1>Vertical Form</h1>
+		
+		<form role="form">
+			<div class="form-group">
+				<label for="email">Email Address</label>
+				<input type="email" class="form-control" id="email" placeholder="Email"></input>
+			</div>
+			
+			<div class="form-group">
+				<label for="pwd">Password</label>
+				<input type="password" class="form-control" id="pwd" placeholder="Password"></input>
+			</div>
+			
+			<button type="submit" class="btn btn-default">Login</button>
+		</form>
+
+	</div>
+	
+	<div class="container">
+		<h1>Horizontal Form</h1>
+		
+		<form class="form-horizontal" role="form">
+			
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="email">Email</label>
+				<div class="col-sm-10">
+					<input type="email" class="form-control" id="email" placeholder="Enter Email">
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="pwd">Password</label>
+				<div class="col-sm-10">
+					<input type="password" class="form-control" id="pwd" placeholder="Enter Password">
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-default">Submit</button>
+				</div>
+			</div>
+			
+		</form>
+	</div>
+	
+	<div class="container">
+		<h1>Inline Form</h1>
+		
+		<form class="form-inline" role="form">
+			<fieldset disabled="disabled">
+			<div class="form-group">
+				<label for="email">Email Address</label>
+				<input type="email" class="form-control" id="email" placeholder="Email"></input>
+			</div>
+			
+			<div class="form-group">
+				<label for="pwd">Password</label>
+				<input type="password" class="form-control" id="pwd" placeholder="Password"></input>
+			</div>
+			
+			<button type="submit" class="btn btn-default">Login</button>
+			</fieldset>	
+		</form>
+	</div>
+	
+	<div class="container">
+		<h1>Typeahead</h1>
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<input type="text" class="typeahead form-control">
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+</body>
+</html>
