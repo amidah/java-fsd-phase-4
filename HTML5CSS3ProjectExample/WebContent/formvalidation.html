@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+<title>FORM VALIDATION EXAMPLES</title>
+<link rel="icon" type="image/x-icon" href="bootstrap.ico"></link>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+</head>
+<body>
+	<div class="container">
+		<h1>Validation Form</h1>
+		
+		<form name="validateform" role="form" onsubmit="return validateForm()">
+			<div class="form-group">
+				<label for="name">User Name</label>
+				<input type="text" name="uname" class="form-control" id="name" placeholder="Enter Name"></input>
+			</div>
+			
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" name="email" class="form-control" id="email" placeholder="Enter Email"></input>
+			</div>
+			
+			<div class="form-group">
+				<label for="pwd">Password</label>
+				<input type="password" name="pass" class="form-control" id="pwd" placeholder="Password"></input>
+			</div>
+			
+			<button type="submit" class="btn btn-default">Login</button>
+		</form>
+
+	</div>
+	
+	<script>
+		function validateForm(){
+			var username = document.validateform.uname.value;
+			var email = document.validateform.email.value;
+			var password = document.validateform.pass.value;
+			
+			var atposition = email.indexOf("@");
+			var dotposition = email.lastIndexOf(".");
+			
+			
+			if(username==null || username==""){
+				alert("Name can't be blank");
+				return false;
+			}
+			else if(atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= email.length){
+				 alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+				  return false;  
+			}
+			else if(password.length < 6){
+				alert("Password must be atleast 6 characters long.");
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>

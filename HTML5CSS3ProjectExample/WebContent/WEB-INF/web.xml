@@ -4,9 +4,9 @@
   <welcome-file-list>
     <!-- <welcome-file>home.html</welcome-file> -->
     <!-- <welcome-file>bootstrap.html</welcome-file> -->
-     <welcome-file>form.html</welcome-file>
-    <!--<welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
+     <!-- <welcome-file>form.html</welcome-file> -->
+    <welcome-file>formvalidation.html</welcome-file>
+    <!--<welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file> -->
   </welcome-file-list>
