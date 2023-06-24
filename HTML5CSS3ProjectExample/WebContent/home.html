@@ -139,12 +139,41 @@ height:15px;
 
 	<b>Current Date and Time: </b><span id="currdate"></span>
 	
-	<br>
-	<br>
+	<br/>
+	<br/>
 	
 	<b>DIGITAL CLOCK: </b><span id="digitalclock"></span>
 
+	<br/>
+	<br/>
+	
+	<form name="myform">
+	Enter Name: <input type="text" name="nameinput"/>
+	<input type="button" onclick="printvalue()" value="print name"/>
+	</form>
+	
+	<br/>
+	<br/>
+	
+	<form>
+	Enter Number: <input type="text" name="number" id="number"/>
+	<input type="button" onclick="calcube()" value="Calculate Cube"/>
+	</form>
+	
+	<br/>
+	<br/>
+	
+	<form>
+		MALE <input type="radio" name="gender" value="male">
+		FEMALE <input type="radio" name="gender" value="female">
+		
+		<input type="button" onclick="getelementsinfo()"  value="Elements Info"/>
+	</form>
+	
+	
 	<script type="text/javascript" src="javascriptfundamentals.js"></script>
+	
+	
 
 	<br/>
 	

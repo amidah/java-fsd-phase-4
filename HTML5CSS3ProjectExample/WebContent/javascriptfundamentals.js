@@ -205,6 +205,51 @@ if(confirm2Backward){
 	}
 
 
+// Navigator
+
+console.log("navigator.appCodeName: "+navigator.appCodeName + "\n");  
+console.log("navigator.appName: "+navigator.appName + "\n");  
+console.log("navigator.appVersion: "+navigator.appVersion + "\n");  
+console.log("navigator.cookieEnabled: "+navigator.cookieEnabled + "\n");  
+console.log("navigator.language: "+navigator.language + "\n");  
+console.log("navigator.userAgent: "+navigator.userAgent + "\n");  
+console.log("navigator.platform: "+navigator.platform + "\n");  
+console.log("navigator.onLine: "+navigator.onLine + "\n");  
+
+
+
+// javascript document object
+
+// Whenever html document is loaded in the browser, it becomes a document object.
+
+function printvalue(){
+	var username = document.myform.nameinput.value;
+	alert("Welcome " + username + ".");
+}
+
+function calcube(){
+	var number = document.getElementById("number").value;
+	alert("The Cube of " + number + " is " + Math.pow(number, 3))
+}
+
+function getelementsinfo(){
+	var genders = document.getElementsByName("gender");
+	alert("The genders mentioned inside the form are: " + "[" + genders[0].value + ", " + genders[1].value + "]");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
