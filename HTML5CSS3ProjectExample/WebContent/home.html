@@ -67,7 +67,11 @@ height:15px;
 	<br>
 	
 	<img id="drag1" src="favicon.ico" alt="Smiley" draggable="true" ondragstart="drag(event)"/>
-	
+	<br>
+	<br>
+	<input type="button" value="click1" onclick="getCubeAndUserinfo(25)"/>
+	<br>
+	<br>
 	
 	
 	
@@ -76,6 +80,7 @@ height:15px;
 	
 	
 	<script type="text/javascript">
+	
 	(function() {    
 	    var dialog = document.getElementById('myFirstDialog');    
 	    document.getElementById('show').onclick = function() {    
@@ -131,5 +136,18 @@ height:15px;
 	}
 	
 	</script>
+
+	<b>Current Date and Time: </b><span id="currdate"></span>
+	
+	<br>
+	<br>
+	
+	<b>DIGITAL CLOCK: </b><span id="digitalclock"></span>
+
+	<script type="text/javascript" src="javascriptfundamentals.js"></script>
+
+	<br/>
+	
+
 </body>
 </html>
