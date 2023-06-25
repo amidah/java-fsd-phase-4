@@ -237,6 +237,107 @@ function getelementsinfo(){
 	alert("The genders mentioned inside the form are: " + "[" + genders[0].value + ", " + genders[1].value + "]");
 }
 
+function mouseoverevent(){
+	alert("Hey this is a mouse over event handling...")
+}
+
+function mouseoutevent(){
+	alert("Hey this is a mouse out event handling...")
+}
+
+function focusevent(){
+	document.getElementById("inputtext").style.background = "aqua";
+}
+
+function keydownevent(event){
+	
+	alert("The key down is " + event.key);
+}
+
+
+// addEventListener() - inbuilt method of JS through which we can add multiple events to a particular html element
+
+// syntax - addEventListener(event, function, useCapture)
+// here the third parameter is optional
+var inputelement = document.getElementById("keyprs");
+inputelement.addEventListener("focus", handlefocusevent);
+inputelement.addEventListener("keypress", keypressevent);
+
+
+function handlefocusevent(){
+	inputelement.style.background = "lightgreen";
+}
+
+function keypressevent(){
+	alert("The key pressed is " + event.key);
+}
+
+// JavaScript Class
+
+class Employee{
+	constructor(id, name){
+		this.id = id;
+		this.name = name;
+	}
+	
+	empdetails(){
+		alert("Employee ID:: " + this.id + " " + "Employee Name:: " + this.name);
+	}
+}
+
+
+var employee1 = new Employee(007, "Roy");
+
+
+var employee2 = new Employee(008, "William");
+
+
+employee1.empdetails();
+employee2.empdetails();
+
+
+// Express a class without assigning any name to it.
+
+var student = class{
+	constructor(id, name){
+		this.id=id;
+		this.name = name;
+	}
+}
+
+alert("Employee class name: " + Employee.name)
+alert("Student class name: " + student.name)
+
+
+// JS Prototype Objects
+
+function Car(name, color){
+	this.name = name;
+	this.color = color;
+}
+
+Car.prototype.carDetail = function(){
+	return this.name + " is of " + this.color + " color"; 
+}
+
+Car.prototype.owner1 = "John";
+	
+	
+Car.prototype.owner2 = "Riya";
+
+var car1 = new Car("Porsche", "Black");
+var car2 = new Car("Audi", "Red");
+
+alert("Car 1 Details: " + car1.owner1 + " is the owner of " + car1.carDetail())
+alert("Car 2 Details: " + car2.owner2 + " is the owner of " + car2.carDetail())
+
+
+
+
+
+
+
+
 
 
 
