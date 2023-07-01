@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Angular Example</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+</head>
+<body ng-app="myapp">
+
+
+<!-- View Part-->
+	<div ng-controller="HelloController">
+		<h2>Hello {{helloTo.title}}!</h2>
+		<p>{{helloTo.para}}</p>
+	</div>
+
+<!-- Controller Part -->
+	<script>
+		angular.module("myapp",[])
+		.controller("HelloController", function($scope){
+			$scope.helloTo={};
+			$scope.helloTo.title="Everyone, Welcome to Anular Learning Session.";
+			$scope.helloTo.para="AngularJs follows two-way data binding."
+		})
+	</script>
+</body>
+</html>

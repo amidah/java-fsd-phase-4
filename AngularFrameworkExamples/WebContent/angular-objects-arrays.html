@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Angular Objects & Arrays</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+	<!-- <div ng-app="" ng-init="person={firstName:'Sam',lastName:'Wood'}">	
+		<p>Person first name is: {{person.firstName}}</p>
+		<p>Person last name is: <span ng-bind="person.lastName"></span></p>
+	</div> -->
+	
+	<div ng-app="" ng-init="friends=['Roy','Keya','Jessie','Adam']">
+		<p>First friend name is: {{friends[0]}}</p>
+		<p>Second friend name is: <span ng-bind="friends[1]"></span></p>
+		
+	
+		<b><u>My friends list is: </u></b>
+		<ol>
+			<li ng-repeat="friend in friends">
+			{{friend}}
+			</li>
+		</ol>
+		
+	</div>
+</body>
+</html>

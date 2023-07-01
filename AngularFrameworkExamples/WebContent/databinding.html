@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Two Way Databinding Example</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>  
+</head>
+<body>
+
+	<div data-ng-app="" data-ng-init="firstName='John';age=25;salary=5000">
+		<p>Name: <input type="text" ng-model="firstName"></p>
+		<p>Age: <input type="text" ng-model="age"></p>
+		<p>Salary: <input type="text" ng-model="salary"></p>
+		<p>
+		<span>The name entered is: {{firstName}}</span>
+		<span>The age entered is: {{age}}</span>
+		<span>The salary entered is: {{salary}}</span>
+		<span>The savings is: {{salary - 1000}} </span>
+		</p>
+	</div>
+
+</body>
+</html>
