@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Angular Dependency Injection</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 <body>
 	<h2>Core Types of Objects and Components:</h2>
@@ -14,5 +15,13 @@
 		<li>constant</li>
 	</ol>
 	<p>These objects and components can be injected into each other using AngularJS Dependency Injection.</p>
+
+	<div ng-app = "mainApp" ng-controller = "CalcController">  
+         <p>Enter a number: <input type = "number" ng-model = "number" /></p>  
+         <button ng-click = "square()">X<sup>2</sup></button>  
+         <p>Result: {{result}}</p>  
+      </div>  
+
+<script src="angular-dependency-injection.js"></script>
 </body>
 </html>
