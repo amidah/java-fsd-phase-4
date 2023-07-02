@@ -108,6 +108,8 @@ Department.prototype=Object.create(Subject.prototype);
 
 var department = new Department("Engineering");
 
+
+
 console.log(department instanceof Subject);
 console.log(department instanceof Department);
 

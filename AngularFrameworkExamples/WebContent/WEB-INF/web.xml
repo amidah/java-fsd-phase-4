@@ -6,7 +6,9 @@
   <!--  <welcome-file>databinding.html</welcome-file> -->
      <!-- <welcome-file>angular-objects-arrays.html</welcome-file> -->
     <!-- <welcome-file>controller.html</welcome-file> -->
-    <welcome-file>angular-dependency-injection.html</welcome-file>
-    <!--<welcome-file>default.jsp</welcome-file> -->
+    <!-- <welcome-file>angular-dependency-injection.html</welcome-file> -->
+    <!-- <welcome-file>form.html</welcome-file> -->
+    <!-- <welcome-file>studentform.html</welcome-file> -->
+    <welcome-file>angular-ajax.html</welcome-file>
   </welcome-file-list>
 </web-app>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form Example</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>  
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="formController">
+	<form>
+		Name: <input type="text" ng-model="firstname">
+		<br>
+		<br>
+		Check to show this: <input type="checkbox" ng-model="myVar">
+		<br>
+		<br>
+		Pick a topic: 
+		<input type="radio" ng-model="radiomodel" value="tuts">Tutorials
+		<input type="radio" ng-model="radiomodel" value="fest">Festivals
+		<input type="radio" ng-model="radiomodel" value="news">News
+	</form>
+	<h2>The name entered is: {{firstname}}</h2>
+	<h2 ng-show="myVar">Checked</h2>
+	
+	<div ng-switch="radiomodel">
+		<div ng-switch-when="tuts">
+			<h2>Tutorials</h2>
+		</div>
+		<div ng-switch-when="fest">
+			<h2>Festivals</h2>
+		</div>
+		<div ng-switch-when="news">
+			<h2>News</h2>
+		</div>
+	</div>
+</div>
+
+<script>
+	var app = angular.module('myApp', []);
+	app.controller('formController', function($scope){
+		$scope.firstname="Sam";
+	})
+</script>
+
+</body>
+</html>
